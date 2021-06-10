@@ -1,0 +1,113 @@
+<div >
+   
+	   <table>
+	   <tr>
+		   <td><th><a href="http://208.92.53.98:3690/LOS40_CLASSIC_SC"><img src="./database/logo_40_classic.png"/></a></th></td>
+		   <td><img src="./database/logocadena100.jpg"/></td>
+		   <td><img src="./database/logoeuropafm.png"/></td>
+		   <td><img src="./database/rockfm.png"/></td>
+		   <td><img src="./database/hit.png"/></td>
+		   
+	   </tr>
+	   <tr>
+		<td><th><img src="./database/megastar.jpg"/></th></td>
+		   <td><img src="./database/mdt.jpg"/></td>
+		   <td><img src="./database/nrkmp3.jpg"/></td>
+		   <td><img src="./database/chinafm.png"/></td>
+		   <td><img src="./database/espectrumgfm.jpg"/></td>
+		   
+	   </tr>
+	   </table>
+   </div>
+   
+   selStation
+   
+   <!--Div for image, selected from database -->
+   
+    <div id="contenido"> <!-- marco para la pagina-->
+            
+            <form>
+                <p><h3>Seleccione una radio consultar</h3></p>
+                
+                <select name="radios" onchange="selStation(this.form)">  
+                    <option selected>u</option>
+                    <option>uuuuuu<option>
+                    
+                </select>
+                <select name="radioslist" onchange="mostrarImagen(this.form)">
+                    <option></option>
+                </select>
+                <div><img style="display: none" name="imagen" id=" imagen" alt="Imagenes"></div>               
+            </form> 
+
+            <div id="aditional"><p>2020-2021 &copy; Lionel Sanchez</p></div>
+            
+        </div>  
+		
+		
+		
+		var stations = new Array()
+stations [0] = ["Selecciona un radio","Los 40 Classic","Cadena100","Kiss FM","Europa FM",
+                "Rock FM","Hit FM","MegaStar","MDT radio","NRK mP3","Chinoles","spectrum FM"]
+
+var imagenes = new Array()
+    imagenes[1] = new Array()
+    imagenes[1][0] = []
+    imagenes[1][1] = ["./database/logo_40_classic.png"]
+    imagenes[1][2] = ["./database/logocadena100.png"]
+    imagenes[1][3] = ["./database/Logo_kiss.png"]
+    imagenes[1][4] = ["./database/logoeuropafm.png"] 
+    imagenes[1][5] = ["./database/rockfm.png"] 
+    imagenes[1][6] = ["./database/hit.png"] 
+    imagenes[1][7] = ["./database/megastar.jpg"] 
+    imagenes[1][8] = ["./database/mdt.jpg"] 
+    imagenes[1][9] = ["./database/nrkmp3.jpg"] 
+    imagenes[1][10] = ["./database/chinafm.png"] 
+	imagenes[1][11] = ["./database/espectrumgfm.jpg"] 
+
+function selStation (lista){
+    var radioSelection = lista.radios.selectedIndex;
+    lista.radioslist.length = stations[radioSelection].length;
+    for (i=0; i<lista.radioslist.length; i++){
+        lista.radioslist.options[i].text= stations[radioSelection][i]
+    }
+}
+
+function mostrarImagen(lista){
+    var radioSelection=lista.radios.selectedIndex;
+    var image = lista.radioslist.selectedIndex;
+    document.imagen.src = imagenes[radioSelection][image];
+    document.imagen.style.display = "block";
+}
+
+   --------------------------------------------
+    <html lang="en" ng-app="app">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Lal lel lil lol lul</title>
+    <link href="style.css" rel="stylesheet" >
+
+    <script src="./libraries/angular-route.min.js"></script>
+    <script src="./libraries/angular.min.js"></script>
+
+    <script src="app.js"></script>
+		
+</head>
+
+<body ng-controller="controlador as lista">
+	
+	<input type="text" ng-model="lista.nombre">
+	<input type="text" ng-model="lista.precio">
+	<input type="button" value = "añadir" ng-click="lista.addProducto()">
+	
+	<li ng-repeat="producto in lista.productos">
+		{{producto.nombre}}
+	</li>
+	
+	<!--<select name="" id ="" ng-model="lista.productoSeleccionado">
+        <option ng-repeat="producto in lista.productos" value="{{producto,id}}">{{producto.nombre}}</option>
+    </select> -->
+</body>
+
+</html>

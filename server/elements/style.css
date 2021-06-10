@@ -1,0 +1,54 @@
+
+body{
+	background: linear-gradient(to top, #555523 , #ffeef6);
+	font-family: 'Lato', sans-serif;
+	font-size: 1.3em;
+	
+	margin: 15px auto;
+	padding: 20px;
+	text-align: center;
+	min-height: 50vh;
+}
+
+#selectTrack{
+    font-family: 'Consolas', sans-serif;
+	color: blue;
+	font-size: 16;
+    width: 60%;
+    height: 5%;	
+}
+
+#SelectedRadio{
+	background-color: #ffeef6;
+	margin:10px auto;
+	width: 63%;
+	height: 5%;
+	text-align: center;
+}
+#stream{
+	font-family: 'DS-Digital';
+	font-size: larger;
+}
+
+#reloj{
+    font-family: 'DS-Digital'; 
+    width: 200px; 
+    font-size: 45px; 
+    color:rgb(0, 0, 188); 
+    text-align: left;
+}
+
+#contenido{
+    position: relative;
+}
+
+#aditional{
+    font-style: oblique;
+    font-family: sans-serif;
+    position: bottom;
+    font-size: large;
+}
+#table{
+	position: fixed;
+}
+
