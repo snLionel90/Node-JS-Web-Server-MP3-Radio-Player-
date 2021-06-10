@@ -11,28 +11,28 @@ const CSS_CONTENT_TYPE = 'text/css'; //hojas de estilos css
 const JS_CONTENT_TYPE = 'text/javascript'; //escripts en js
 
 //inicializamos el servidor 
-const servidor=http.createServer( (pedido,respuesta) => {
-  const objetourl = url.parse(pedido.url);
-  let camino='server'+objetourl.pathname;
-  if (camino=='server/')
-    camino='server/index.html';
-  fs.stat(camino, error => {
+const servidor=http.createServer( (req,res) => {
+  const objetourl = url.parse(req.url);
+  let pathFolder='server'+objetourl.pathname;
+  if (pathFolder=='server/')
+    pathFolder='server/index.html';
+  fs.stat(pathFolder, error => {
     if (!error) {
-      fs.readFile(camino, (error,contenido) => {
+      fs.readFile(pathFolder, (error,contenido) => {
         if (error) {
-          respuesta.writeHead(500, {'Content-Type': 'text/plain'});
-          respuesta.write('Error interno');
-          respuesta.end();					
+          res.writeHead(500, {'Content-Type': 'text/plain'});
+          res.write('Error interno');
+          res.end();					
         } else {
-          respuesta.writeHead(200, {'Content-Type': 'text/html'});
-          respuesta.write(contenido);
-          respuesta.end();
+          res.writeHead(200, {'Content-Type': 'text/html'});
+          res.write(contenido);
+          res.end();
         }
       });
     } else {
-      respuesta.writeHead(404, {'Content-Type': 'text/html'});
-      respuesta.write('<!doctype html><html><head></head><body>Recurso inexistente</body></html>');		
-      respuesta.end();
+      res.writeHead(404, {'Content-Type': 'text/html'});
+      res.write('<!doctype html><html><head></head><body>Recurso inexistente</body></html>');		
+      res.end();
     }
   });
 });
