@@ -1,23 +1,32 @@
 <DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" http://www.w3.org/TR/html4/loose.dtd>
-<html lang="es">
-<head>
-	<script language="javascript" type="text/javascript" src="../mp3player/mp3player.js"></script>
-	<link href="../mp3player/stylesheet.css" rel="stylesheet"> 
-	<META name="Author" lang="es" content="Lionel Sanchez">
-    <link rel=" Shortcut Icon" href="./elements/iconitis.ico" type="image/x-icon"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
-
-<body >
+	<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		
+		<meta name="description" content="Mp3 Music Player App">
+		<meta name="robots" content="index, follow">
 	
-	<div >
-		<button class="yee"><a href="../main.html">ir a Radio player</a></button>
-		<label id = "copy" >Visita mi GitHub!&copy; snlionel90</label> 
-		<input type="file" id="thefile" accept="audio/*" />
-		<canvas id="canvas"></canvas>
-		  
-		<audio id="audio" controls></audio>  
-	</div>
-</body>
-
+		<!--Mi propia hoja de estilos CSS-->
+		<link rel="stylesheet" href="stylesheet.css">
+		<!--Mis Scripts en JavaSrcipt-->
+		<script  src="mp3player.js"></script>
+		
+		<!--<link rel="icon" href="" type="image/x-icon" />-->
+		
+		<title>MP3 Player </title>
+	</head>
+	<body>
+		<div class="maindix">
+			<h1 class="text-info">Mp3 Music Player <br> by SnLionel90</h1>
+		</div>
+		<div id="container-1" class="cp720" role="application" aria-label="media">
+			<div >
+				<button class="yee"><a href="../Index.html">ir a Radio player</a></button>
+				<input type="file" id="thefile" accept="audio/*" />
+				<canvas id="canvas"></canvas>
+				<audio id="audio" controls></audio>  
+			</div>
+		</div>
+	
+	</body>
 </html>
