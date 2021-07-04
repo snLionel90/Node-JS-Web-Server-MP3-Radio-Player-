@@ -49,7 +49,7 @@ window.onload = function() {
         
         var r = barHeight + (25 * (i/bufferLength));
         var g = 250 * (i/bufferLength);
-        var b = 150;
+        var b = 90;
 
         ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
         ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
