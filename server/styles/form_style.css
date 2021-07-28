@@ -1,0 +1,48 @@
+/*Tablon de comentarios*/
+.comment_section{
+    background-color: bisque;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    top: 0;
+    
+    border: 1px;
+    border-style: double;
+}
+.comment_section >li{
+    height: max-content;
+}
+
+/*Seccion del formulario*/
+.caja >p{
+    left: 50%;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    
+}
+.caja > textarea{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(19, 19, 175);
+    font-style: italic;
+    font-size: 20px;
+    margin-left: 35%;
+}
+.caja >input  {
+    font-family: 'Courier New', Courier, monospace;
+    color: darkblue;
+    font-size: 15px;
+    width: 37%;
+    margin-left: 35%;
+}
+#buttons{
+    margin-left: 45%;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*/*Cosas generales*/
+
+body{
+    background: linear-gradient(to top, #555523 , #ffeef6);
+}

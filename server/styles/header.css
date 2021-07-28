@@ -1,0 +1,59 @@
+/*Seccion del futer*/
+.header{
+    position: relative;
+    width: 1200px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #505050;
+    
+  }
+#icons-container{
+    position: relative;
+    top:9px;
+    float: right;
+}
+
+.icon{
+    position: relative;
+      width: 44px;
+      height: 44px;
+      margin-right: 8px;
+      display: inline-block;
+  
+}
+.icon-last{
+    margin-right: 0px;
+}
+      
+.icon-email{
+      background-image: url(../elements/icon-email.png);
+}
+  
+.icon-github{
+      background-image: url(../elements/icon-github.png);
+}
+  
+.icon-instagram{
+      background-image: url(../elements/icon-instagram.png);
+}
+  
+.icon-linkedin{
+      background-image: url(../elements/icon-linkedin.png);
+}
+/*/*UN RELOJ*/
+#reloj{
+    font-family: 'DS-Digital'; 
+    width: 200px; 
+    font-size: 45px; 
+    color:rgb(204, 204, 204); 
+    
+    
+}
+#copy{
+      float: none;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: larger;
+      color: aliceblue;
+      float: left;
+}

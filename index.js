@@ -4,7 +4,7 @@ const url=require('url');
 const fs=require('fs');
 
 //Configuramos todo con una variable de entorno del puerto
-const {PORT  = 3000} =process.env //la variable de entorno
+const {PORT  = 3002} =process.env //la variable de entorno
 
 const HTML_CONTENT_TYPE = 'text/html'; //tipo de documento, en este caso html
 const CSS_CONTENT_TYPE = 'text/css'; //hojas de estilos css
